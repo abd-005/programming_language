@@ -49,23 +49,43 @@ full = f"{first} {last}"
 
 
 course = "  Python programming"
-print(course.upper()) # Will print: All Upper Case 
+# print(course.upper()) # Will print: All Upper Case 
 # Output: (  PYTHON PROGRAMMING)
-print(course.lower()) # Will print: All Lower Case 
+# print(course.lower()) # Will print: All Lower Case 
 # Output: (  Python Programming)
-print(course.title()) # Will print: First letter capital
+# print(course.title()) # Will print: First letter capital
 # Output: (  Python Programming)
-print(course.strip()) # Will print: Removes white spaces
+# print(course.strip()) # Will print: Removes white spaces
 # Output: (Python programming)
-print(course.lstrip()) # Will print: Removes white spaces at the beginning
+# print(course.lstrip()) # Will print: Removes white spaces at the beginning
 # Output: (Python programming)
-print(course.rstrip()) # Will print: Removes white spaces at the end
+# print(course.rstrip()) # Will print: Removes white spaces at the end
 # Output: (  Python programming)
-print(course.find("pro")) # Will print: finds the first index
+# print(course.find("pro")) # Will print: finds the first index
 # Output: 9
-print(course.replace("pro", "mri")) # Will print: replaces the string
+# print(course.replace("pro", "mri")) # Will print: replaces the string
 # Output: (  Python mrigramming)
-print("pro" in course) # Will print: Boolean value for containing the string
+# print("pro" in course) # Will print: Boolean value for containing the string
 # Output: True
-print("pro" not in course) # Will print: Boolean value for not containing the string
+# print("pro" not in course) # Will print: Boolean value for not containing the string
 # Output: False
+
+
+# ---Numbers---
+x = 1 # integer
+x = 1.1 # float
+x = 3 + 4j # complex 
+
+print(10 + 3) # add
+print(10 - 3) # sub
+print(10 * 3) # mul
+print(10 / 3) # div, output is float
+print(10 // 3) # div, output is int 
+print(10 % 3) # mod, output is reminder
+print(10 ** 3) # output 10^3
+
+x = 10
+x = x + 3
+x += 3 # other way to add
+
+
