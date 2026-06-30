@@ -76,16 +76,42 @@ x = 1 # integer
 x = 1.1 # float
 x = 3 + 4j # complex 
 
-print(10 + 3) # add
-print(10 - 3) # sub
-print(10 * 3) # mul
-print(10 / 3) # div, output is float
-print(10 // 3) # div, output is int 
-print(10 % 3) # mod, output is reminder
-print(10 ** 3) # output 10^3
+# print(10 + 3) # add
+# print(10 - 3) # sub
+# print(10 * 3) # mul
+# print(10 / 3) # div, output is float
+# print(10 // 3) # div, output is int 
+# print(10 % 3) # mod, output is reminder
+# print(10 ** 3) # output 10^3
 
 x = 10
 x = x + 3
 x += 3 # other way to add
+
+# ---Math--
+
+
+import math
+
+print(round(2.9))
+print(abs(-2.9))
+
+print(math.ceil(2.2))
+print(math.floor(2.2))
+# Have to practice from documentation
+
+
+# Type Conversion
+x = input("x: ")
+print(type(x))
+y = int(x) + 1 # error
+print(f"x: {x}, y: {y}")
+
+# int(x)
+# float(x)
+# bool(x)
+# str(x)
+
+# Falsy : "" || 0 || None
 
 
