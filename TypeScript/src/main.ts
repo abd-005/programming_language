@@ -63,6 +63,9 @@ foodData.push("Banana")
 
 console.log(foodData)
 
+
+// Tuples
+
 const developers: [string, number, boolean] = ["Hamood", 23, true];
 
 developers[0] = "Harris";

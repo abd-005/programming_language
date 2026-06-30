@@ -36,6 +36,7 @@ foodData.push(true);
 foodData.push(32);
 foodData.push("Banana");
 console.log(foodData);
+// Tuples
 const developers = ["Hamood", 23, true];
 developers[0] = "Harris";
 // developers[1] = "Twenty"; // will throw error
