@@ -86,37 +86,37 @@
 
 // Implicit type assign
 
-const devs: {} = {
-    name: "Harris",
-    age: 23,
-    skill: true,
-} 
+// const devs: {} = {
+//     name: "Harris",
+//     age: 23,
+//     skill: true,
+// } 
 
 
 // Implicit type assign X optional chaining X readonly
 
-const developers: { readonly name: string, age: number, skill?: boolean } = {
-    name: "Hamood",
-    age: 28,
-    skill: true,
-} 
+// const developers: { readonly name: string, age: number, skill?: boolean } = {
+//     name: "Hamood",
+//     age: 28,
+//     skill: true,
+// } 
 
 
 // Optimized way
 
-type User = {
-    readonly name: string;
-    age: number;
-    skill?: boolean;
-}
+// type User = {
+//     readonly name: string;
+//     age: number;
+//     skill?: boolean;
+// }
 
 
 // Other way of type
-interface Persons {
-    readonly name: string;
-    age: number;
-    skill?: boolean;
-}
+// interface Persons {
+//     readonly name: string;
+//     age: number;
+//     skill?: boolean;
+// }
 
 
 // const users: User = {
@@ -125,10 +125,25 @@ interface Persons {
 //     skill: true,
 // } 
 
-const users: Persons = {
-    name: "Zareef",
-    age: 23,
-    skill: true,
-} 
+// const users: Persons = {
+//     name: "Zareef",
+//     age: 23,
+//     skill: true,
+// } 
 
 
+////////////////////////////////////////////////////////////////////
+        //   Enum       
+////////////////////////////////////////////////////////////////////
+
+
+enum skills {
+    MERN = "MERN Stack",
+    LARAVEL = "PHP with Laravel",
+    DJANGO = "Python with Django",
+    IOS = "Flutter / Native",
+}
+
+const skill = skills.DJANGO
+
+console.log(skill)

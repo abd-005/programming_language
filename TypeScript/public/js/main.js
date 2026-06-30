@@ -49,25 +49,49 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //   Array       
 ////////////////////////////////////////////////////////////////////
 // Implicit type assign
-const devs = {
-    name: "Harris",
-    age: 23,
-    skill: true,
-};
+// const devs: {} = {
+//     name: "Harris",
+//     age: 23,
+//     skill: true,
+// } 
 // Implicit type assign X optional chaining X readonly
-const developers = {
-    name: "Hamood",
-    age: 28,
-    skill: true,
-};
+// const developers: { readonly name: string, age: number, skill?: boolean } = {
+//     name: "Hamood",
+//     age: 28,
+//     skill: true,
+// } 
+// Optimized way
+// type User = {
+//     readonly name: string;
+//     age: number;
+//     skill?: boolean;
+// }
+// Other way of type
+// interface Persons {
+//     readonly name: string;
+//     age: number;
+//     skill?: boolean;
+// }
 // const users: User = {
 //     name: "Harris",
 //     age: 23,
 //     skill: true,
 // } 
-const users = {
-    name: "Zareef",
-    age: 23,
-    skill: true,
-};
+// const users: Persons = {
+//     name: "Zareef",
+//     age: 23,
+//     skill: true,
+// } 
+////////////////////////////////////////////////////////////////////
+//   Enum       
+////////////////////////////////////////////////////////////////////
+var skills;
+(function (skills) {
+    skills["MERN"] = "MERN Stack";
+    skills["LARAVEL"] = "PHP with Laravel";
+    skills["DJANGO"] = "Python with Django";
+    skills["IOS"] = "Flutter / Native";
+})(skills || (skills = {}));
+const skill = skills.DJANGO;
+console.log(skill);
 //# sourceMappingURL=main.js.map
