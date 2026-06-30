@@ -137,13 +137,32 @@
 ////////////////////////////////////////////////////////////////////
 
 
-enum skills {
-    MERN = "MERN Stack",
-    LARAVEL = "PHP with Laravel",
-    DJANGO = "Python with Django",
-    IOS = "Flutter / Native",
+// enum skills {
+//     MERN = "MERN Stack",
+//     LARAVEL = "PHP with Laravel",
+//     DJANGO = "Python with Django",
+//     IOS = "Flutter / Native",
+// }
+
+// const skill = skills.DJANGO
+
+// console.log(skill)
+
+
+////////////////////////////////////////////////////////////////////
+        //   Method       
+////////////////////////////////////////////////////////////////////
+
+
+const info = (val: string, union: string | number) => {
+    val.toUpperCase();
+
+    // union.toUpperCase(); // error: cause union could be number in future
+
+    if(typeof union === "string") {
+        // union.toUpperCase() // will cause error while wanna return number in outer scope
+        return union.toUpperCase()
+    }
+
+    return union + 10
 }
-
-const skill = skills.DJANGO
-
-console.log(skill)

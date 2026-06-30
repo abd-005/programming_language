@@ -85,13 +85,24 @@ Object.defineProperty(exports, "__esModule", { value: true });
 ////////////////////////////////////////////////////////////////////
 //   Enum       
 ////////////////////////////////////////////////////////////////////
-var skills;
-(function (skills) {
-    skills["MERN"] = "MERN Stack";
-    skills["LARAVEL"] = "PHP with Laravel";
-    skills["DJANGO"] = "Python with Django";
-    skills["IOS"] = "Flutter / Native";
-})(skills || (skills = {}));
-const skill = skills.DJANGO;
-console.log(skill);
+// enum skills {
+//     MERN = "MERN Stack",
+//     LARAVEL = "PHP with Laravel",
+//     DJANGO = "Python with Django",
+//     IOS = "Flutter / Native",
+// }
+// const skill = skills.DJANGO
+// console.log(skill)
+////////////////////////////////////////////////////////////////////
+//   Method       
+////////////////////////////////////////////////////////////////////
+const info = (val, union) => {
+    val.toUpperCase();
+    // union.toUpperCase(); // error: cause union could be number in future
+    if (typeof union === "string") {
+        // union.toUpperCase() // will cause error while wanna return number in outer scope
+        return union.toUpperCase();
+    }
+    return union + 10;
+};
 //# sourceMappingURL=main.js.map
