@@ -96,13 +96,63 @@ Object.defineProperty(exports, "__esModule", { value: true });
 ////////////////////////////////////////////////////////////////////
 //   Method       
 ////////////////////////////////////////////////////////////////////
-const info = (val, union) => {
-    val.toUpperCase();
-    // union.toUpperCase(); // error: cause union could be number in future
-    if (typeof union === "string") {
-        // union.toUpperCase() // will cause error while wanna return number in outer scope
-        return union.toUpperCase();
+// const info = (val: string, union: string | number) => {
+//     val.toUpperCase();
+//     // union.toUpperCase(); // error: cause union could be number in future
+//     if(typeof union === "string") {
+//         // union.toUpperCase() // will cause error while wanna return number in outer scope
+//         return union.toUpperCase()
+//     }
+//     return union + 10
+// }
+////////////////////////////////////////////////////////////////////
+//   OOP       
+////////////////////////////////////////////////////////////////////
+// Public
+class Person {
+    name;
+    age;
+    skill;
+    constructor(name, age, skill) {
+        this.name = name;
+        this.age = age;
+        this.skill = skill;
     }
-    return union + 10;
-};
+}
+const person = new Person('Raad', 25, true);
+console.log(person);
+// Protected
+class Employee {
+    name;
+    age;
+    skill;
+    constructor(name, age, skill) {
+        this.name = name;
+        this.age = age;
+        this.skill = skill;
+    }
+}
+const employee = new Employee('Rafid', 28, false);
+console.log(employee);
+// Private
+class Student {
+    name;
+    age;
+    skill;
+    constructor(name, age, skill) {
+        this.name = name;
+        this.age = age;
+        this.skill = skill;
+    }
+}
+class Teacher extends Student {
+    constructor(name, age, skill) {
+        super(name, age, skill);
+    }
+    ageCal() {
+        return this.age + 15;
+    }
+}
+const teacher = new Teacher('Fin', 23, true);
+console.log(teacher.ageCal());
 //# sourceMappingURL=main.js.map
