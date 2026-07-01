@@ -154,15 +154,37 @@
 ////////////////////////////////////////////////////////////////////
 
 
-const info = (val: string, union: string | number) => {
-    val.toUpperCase();
+// const info = (val: string, union: string | number) => {
+//     val.toUpperCase();
 
-    // union.toUpperCase(); // error: cause union could be number in future
+//     // union.toUpperCase(); // error: cause union could be number in future
 
-    if(typeof union === "string") {
-        // union.toUpperCase() // will cause error while wanna return number in outer scope
-        return union.toUpperCase()
+//     if(typeof union === "string") {
+//         // union.toUpperCase() // will cause error while wanna return number in outer scope
+//         return union.toUpperCase()
+//     }
+
+//     return union + 10
+// }
+
+
+////////////////////////////////////////////////////////////////////
+        //   OOP       
+////////////////////////////////////////////////////////////////////
+
+
+class Student {
+    public name: string;
+    public age: number;
+    public skill: boolean;
+
+    constructor (name: string, age: number, skill: boolean){
+        this.name = name;
+        this.age = age;
+        this.skill = skill;
     }
-
-    return union + 10
 }
+
+const student = new Student('Raad', 25, true)
+
+console.log(student)
