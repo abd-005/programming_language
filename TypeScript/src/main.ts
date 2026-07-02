@@ -173,70 +173,88 @@
 ////////////////////////////////////////////////////////////////////
 
 
-// Public
+// // Public
 
-class Person {
-    public name: string;
-    public age: number;
-    public skill: boolean;
+// class Person {
+//     public name: string;
+//     public age: number;
+//     public skill: boolean;
 
-    constructor (name: string, age: number, skill: boolean){
-        this.name = name;
-        this.age = age;
-        this.skill = skill;
-    }
+//     constructor (name: string, age: number, skill: boolean){
+//         this.name = name;
+//         this.age = age;
+//         this.skill = skill;
+//     }
+// }
+
+// const person = new Person('Raad', 25, true)
+
+// console.log(person)
+
+
+// // Protected
+
+// class Employee {
+//     private name: string;
+//     private age: number;
+//     private skill: boolean;
+
+//     constructor (name: string, age: number, skill: boolean){
+//         this.name = name;
+//         this.age = age;
+//         this.skill = skill;
+//     }
+// }
+
+// const employee = new Employee('Rafid', 28, false)
+
+// console.log(employee)
+
+
+// // Private
+
+// class Student {
+//     protected name: string;
+//     protected age: number;
+//     protected skill: boolean;
+
+//     constructor (name: string, age: number, skill: boolean){
+//         this.name = name;
+//         this.age = age;
+//         this.skill = skill;
+//     }
+// }
+
+// class Teacher extends Student {
+
+//     constructor (name: string, age: number, skill: boolean){
+//         super(name, age, skill)
+//     }
+
+//     ageCal() {
+//         return this.age + 15
+//     }
+// }
+
+// const teacher = new Teacher('Fin', 23, true)
+
+// console.log(teacher.ageCal())
+
+
+////////////////////////////////////////////////////////////////////
+        //   Generic       
+////////////////////////////////////////////////////////////////////
+
+const useForm = {
+                name: "Fahim",
+                password: "fHt34",
+        }
+
+
+interface LoginForm {
+        name: string,
+        password: string,
 }
 
-const person = new Person('Raad', 25, true)
-
-console.log(person)
-
-
-// Protected
-
-class Employee {
-    private name: string;
-    private age: number;
-    private skill: boolean;
-
-    constructor (name: string, age: number, skill: boolean){
-        this.name = name;
-        this.age = age;
-        this.skill = skill;
-    }
-}
-
-const employee = new Employee('Rafid', 28, false)
-
-console.log(employee)
-
-
-// Private
-
-class Student {
-    protected name: string;
-    protected age: number;
-    protected skill: boolean;
-
-    constructor (name: string, age: number, skill: boolean){
-        this.name = name;
-        this.age = age;
-        this.skill = skill;
-    }
-}
-
-class Teacher extends Student {
-
-    constructor (name: string, age: number, skill: boolean){
-        super(name, age, skill)
-    }
-
-    ageCal() {
-        return this.age + 15
-    }
-}
-
-const teacher = new Teacher('Fin', 23, true)
-
-console.log(teacher.ageCal())
+const form = useForm<LoginForm>();
 
