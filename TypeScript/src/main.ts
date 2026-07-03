@@ -245,16 +245,11 @@
         //   Generic       
 ////////////////////////////////////////////////////////////////////
 
-const useForm = {
-                name: "Fahim",
-                password: "fHt34",
-        }
 
-
-interface LoginForm {
-        name: string,
-        password: string,
+interface User {
+  name: string;
+  phone?: string;
 }
 
-const form = useForm<LoginForm>();
+const users: Array<User> = [];
 
